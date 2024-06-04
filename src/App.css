@@ -1,38 +1,298 @@
-.App {
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.video-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Golden Line */
+.golden-line {
+  width: 100%;
+  height: 5px;
+  background: gold;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: transparent; /* Fully transparent background */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Keep it above other elements except the video */
+  transition: background-color 0.5s ease;
+}
+
+.navbar:hover {
+  background: rgba(0, 0, 0, 0.8); /* Dark background on hover */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 50px;
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-logo {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar-tagline {
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item {
+  height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links:hover {
+  color: #808080;
+}
+
+.join-us-btn {
+  background: gold;
+  color: black;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.join-us-btn:hover {
+  background: #ffd700;
+  color: white;
+}
+
+/* Video Container Styles */
+.video-container {
+  position: absolute; /* Ensure the video is behind the navbar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Make the video cover the entire viewport height */
+  z-index: -1; /* Place the video behind other elements */
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 20px;
+  background: black;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: gold;
+  margin: 10px auto 0;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photos {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+.about-photo {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+}
+
+.about-photo:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.about-photo:nth-child(2) {
+  top: 50px;
+  left: 50px;
+  transform: translate(-25%, -25%);
+}
+
+.about-photo:nth-child(3) {
+  top: 100px;
+  left: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.about-text {
+  max-width: 600px;
+  margin-left: 30px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.about-text blockquote {
+  font-style: italic;
   color: white;
+  font-size: 1.5rem;
+  position: relative;
+  margin: 0;
+  transition: color 0.5s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.about-text blockquote::before {
+  content: open-quote;
+  font-size: 3rem;
+  color: gold;
+  position: absolute;
+  left: -40px;
+  top: -20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about-text blockquote::after {
+  content: close-quote;
+  font-size: 3rem;
+  color: gold;
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .about-photos {
+    flex-direction: row;
+  }
+
+  .about-photo {
+    position: relative;
+    transform: translate(0, 0);
+  }
+
+  .about-text {
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  .about-text blockquote::before,
+  .about-text blockquote::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-photo {
+    width: 100px;
+    height: 100px;
   }
 }
