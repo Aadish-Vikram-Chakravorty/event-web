@@ -20,9 +20,10 @@ function App() {
     <div className="App">
       <Navbar />
       <VideoBackground />
-      <OverlayText />
       <GoldenLine />
       <AboutSection />
+      <GoldenLine2 />
+      <Gallery />
     </div>
   );
 }
@@ -39,15 +40,15 @@ function Navbar() {
             <a href="#about" className="nav-links">About</a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-links">Services</a>
+            <a href="#" className="nav-links">Gallery</a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-links">Contact</a>
+            <a href="#" className="nav-links">Contact Us</a>
           </li>
         </ul>
         <div className="navbar-logo-container">
-          <a href="#" className="navbar-logo">Stylish Logo</a>
-          <p className="navbar-tagline">Dance the night away</p>
+          <a href="#" className="navbar-logo">NIRVANA</a>
+          <p className="navbar-tagline">Live It. Love It.</p>
         </div>
         <a href="#" className="join-us-btn">Join Us</a>
       </div>
@@ -66,15 +67,6 @@ function VideoBackground() {
   );
 }
 
-function OverlayText() {
-  return (
-    <div className="overlay-text">
-      <h1>Welcome to Our Event</h1>
-      <p>Join us for a night of fun and excitement!</p>
-    </div>
-  );
-}
-
 function GoldenLine() {
   return <hr className="golden-line" />;
 }
@@ -88,6 +80,31 @@ function AboutSection() {
           <img src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 1" className="about-photo" />
           <img src="https://images.pexels.com/photos/3811021/pexels-photo-3811021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
           <img src="https://images.pexels.com/photos/1805895/pexels-photo-1805895.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 3" className="about-photo" />
+        </div>
+        <div className="about-text">
+          <blockquote>
+            "An amazing night full of energy and unforgettable moments!"
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  );
+}
+function GoldenLine2() {
+  return <hr className="golden-line" />;
+}
+
+function Gallery() {
+  return (
+    <section id="about" className="about-section">
+      <h2 className="about-title">Gallery</h2>
+      <div className="about-content">
+        <div className="about-photos">
+          <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 1" className="about-photo" />
+          <img src="https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
+          <img src="https://images.pexels.com/photos/12311815/pexels-photo-12311815.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
+          <img src="https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
+          <img src="https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 3" className="about-photo" />
         </div>
         <div className="about-text">
           <blockquote>

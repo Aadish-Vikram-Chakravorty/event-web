@@ -20,15 +20,17 @@ body {
 
 .video {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
 /* Golden Line */
 .golden-line {
-  width: 100%;
-  height: 5px;
-  background: gold;
+  /* width: 100%; */
+  height: 2px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background: #dbb85e;
   position: relative;
   z-index: 1;
 }
@@ -106,11 +108,11 @@ body {
 }
 
 .nav-links:hover {
-  color: #808080;
+  color: #dbb85e;
 }
 
 .join-us-btn {
-  background: gold;
+  background-image: linear-gradient(123deg, #866a2f, #dbb85e 50%, #866b2f);
   color: black;
   border-radius: 25px;
   padding: 0.5rem 1rem;
@@ -120,25 +122,20 @@ body {
   margin-right: 20px;
 }
 
-.join-us-btn:hover {
-  background: #ffd700;
-  color: white;
-}
-
 /* Video Container Styles */
 .video-container {
-  position: absolute; /* Ensure the video is behind the navbar */
+  position: absolute; /*Ensure the video is behind the navbar */
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh; /* Make the video cover the entire viewport height */
-  z-index: -1; /* Place the video behind other elements */
+  /* z-index: -1; Place the video behind other elements */
   overflow: hidden;
 }
 
 .video {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -164,28 +161,15 @@ body {
 
 /* About Section */
 .about-section {
-  padding: 100px 20px;
+  padding: 20px; /* Adjust padding as needed */
   background: black;
   color: white;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-.about-title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 5px;
-  background: gold;
-  margin: 10px auto 0;
 }
 
 .about-content {
@@ -197,54 +181,30 @@ body {
 
 .about-photos {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .about-photo {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   margin: 10px;
   object-fit: cover;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-}
-
-.about-photo:nth-child(1) {
-  top: 0;
-  left: 0;
-  transform: translate(0, 0);
-}
-
-.about-photo:nth-child(2) {
-  top: 50px;
-  left: 50px;
-  transform: translate(-25%, -25%);
-}
-
-.about-photo:nth-child(3) {
-  top: 100px;
-  left: 100px;
-  transform: translate(-50%, -50%);
 }
 
 .about-text {
   max-width: 600px;
-  margin-left: 30px;
-  font-size: 1.2rem;
-  position: relative;
+  margin: 0 auto;
 }
 
 .about-text blockquote {
   font-style: italic;
   color: white;
   font-size: 1.5rem;
-  position: relative;
   margin: 0;
-  transition: color 0.5s ease-in-out;
+  position: relative;
 }
 
 .about-text blockquote::before {
