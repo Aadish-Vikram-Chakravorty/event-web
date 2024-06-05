@@ -26,10 +26,7 @@ body {
 
 /* Golden Line */
 .golden-line {
-  /* width: 100%; */
-  height: 2px;
-  margin-left: 50px;
-  margin-right: 50px;
+  height: 3px;
   background: #dbb85e;
   position: relative;
   z-index: 1;
@@ -37,7 +34,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background: transparent; /* Fully transparent background */
+  background-color: black;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -45,12 +42,12 @@ body {
   font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index: 10; /* Keep it above other elements except the video */
+  z-index: 10;
   transition: background-color 0.5s ease;
 }
 
 .navbar:hover {
-  background: rgba(0, 0, 0, 0.8); /* Dark background on hover */
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-container {
@@ -94,6 +91,16 @@ body {
   text-align: center;
 }
 
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
 .nav-item {
   height: 80px;
 }
@@ -122,21 +129,14 @@ body {
   margin-right: 20px;
 }
 
-/* Video Container Styles */
-.video-container {
-  position: absolute; /*Ensure the video is behind the navbar */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* Make the video cover the entire viewport height */
-  /* z-index: -1; Place the video behind other elements */
-  overflow: hidden;
+.menu-icon {
+  display: none;
 }
 
-.video {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.menu-icon .fa-bars,
+.menu-icon .fa-times {
+  color: white;
+  font-size: 2rem;
 }
 
 /* Overlay Text */
@@ -161,7 +161,7 @@ body {
 
 /* About Section */
 .about-section {
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
   background: black;
   color: white;
   text-align: center;
@@ -181,7 +181,7 @@ body {
 
 .about-photos {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -199,15 +199,16 @@ body {
   margin: 0 auto;
 }
 
-.about-text blockquote {
+.about-text q {
   font-style: italic;
   color: white;
   font-size: 1.5rem;
   margin: 0;
   position: relative;
+  /* transition: color 0.5s ease; */
 }
 
-.about-text blockquote::before {
+.about-text q::before {
   content: open-quote;
   font-size: 3rem;
   color: gold;
@@ -216,13 +217,49 @@ body {
   top: -20px;
 }
 
-.about-text blockquote::after {
+.about-text q::after {
   content: close-quote;
   font-size: 3rem;
   color: gold;
   position: absolute;
   right: -40px;
   bottom: -20px;
+}
+
+/* Contact Us Section */
+.contact-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #dbb85e;
 }
 
 @media screen and (max-width: 768px) {
@@ -244,9 +281,22 @@ body {
     text-align: center;
   }
 
-  .about-text blockquote::before,
-  .about-text blockquote::after {
+  .about-text q::before,
+  .about-text q::after {
     display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 }
 
@@ -254,5 +304,11 @@ body {
   .about-photo {
     width: 100px;
     height: 100px;
+  }
+
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    /* padding-left: ; */
   }
 }
