@@ -100,7 +100,7 @@ function Gallery() {
 function ContactUs() {
   return (
     <footer id="contact" className="contact-section">
-      <img src='https://vitbhopal.ac.in/file/2024/02/logo-300x145.png'></img>
+      <img src='https://vitbhopal.ac.in/file/2024/02/logo-300x145.png' alt=''></img>
       <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-facebook-f">Facebook</i>
