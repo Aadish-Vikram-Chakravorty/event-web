@@ -20,7 +20,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="nav-left">
-          <a href="#" className="nav-links">Home</a>
+          <a href="#home" className="nav-links">Home</a>
           <a href="#about" className="nav-links">About</a>
           <a href="#gallery" className="nav-links">Gallery</a>
           <a href="#contact" className="nav-links">Contact Us</a>
@@ -29,7 +29,7 @@ function Navbar() {
           <a href="#home" className="navbar-logo">NIRVANA</a>
           <p className="navbar-tagline">Live It. Love It.</p>
         </div>
-        <a href="#" className="join-us-btn">Join Us</a>
+        <a href="#joinus" className="join-us-btn">Join Us</a>
       </div>
     </nav>
   );
@@ -83,7 +83,7 @@ function Gallery() {
     <section id="about" className="about-section">
       <h2 className="gallery-title">Gallery - A Glimpse into the Past</h2>
         <div className="gallery-photos">
-        <marquee behavior="scroll" direction="left">
+        {/* <marquee behavior="scroll" direction="left"> */}
           <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 1" className="about-photo" />
           <img src="https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
           <img src="https://images.pexels.com/photos/12311815/pexels-photo-12311815.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 2" className="about-photo" />
@@ -91,7 +91,7 @@ function Gallery() {
           <img src="https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 3" className="about-photo" />
           <img src="https://images.pexels.com/photos/8092933/pexels-photo-8092933.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 3" className="about-photo" />
           <img src="https://images.pexels.com/photos/1625355/pexels-photo-1625355.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event 3" className="about-photo" />
-          </marquee>
+          {/* </marquee> */}
         </div>
     </section>
   );
