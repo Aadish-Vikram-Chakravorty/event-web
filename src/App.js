@@ -105,13 +105,13 @@ function ContactUs() {
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-facebook-f">Facebook</i>
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/iamAadVik" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-twitter">Twitter</i>
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram">Instagram</i>
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/aadish-vikram-chakravorty/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-linkedin-in">LinkedIn</i>
         </a>
       </div>

@@ -36,18 +36,19 @@ body {
 .navbar {
   background-color: black;
   height: 80px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   transition: background-color 0.5s ease;
 }
 
 .navbar:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -131,10 +132,43 @@ body {
 .overlay-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  /* display: inline-block; */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(50, end), blink-caret 0.55s step-end infinite;
 }
 
 .overlay-text p {
   font-size: 1.5rem;
+  /* display: inline-block; */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(50, end), blink-caret 0.55s step-end infinite;
+}
+
+.overlay-text h1 span,
+.overlay-text p span {
+  opacity: 0; /* Start with invisible letters */
+  animation: appear 0.1s forwards; /* Animation for each letter */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 /* About Section */
